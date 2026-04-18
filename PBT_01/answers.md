@@ -61,97 +61,34 @@ A2.
 4 lỗi Semantic khiến SEO thấp
 Lỗi 1: Không dùng thẻ
 
-<!-- <header> -->
+ <header>
 
-Bạn dùng:
+A2.
 
-<!-- <div class="header"> -->
-
+Lỗi 1: Không dùng thẻ &lt;header&gt;
+Bạn dùng: &lt;div class="header"&gt;
 Google không biết đây là phần đầu trang.
+Sửa thành: &lt;header&gt;
 
-Sửa thành:
-
-<!-- <header> -->
-
-Lỗi 2: Menu không dùng
-
- <!-- <nav> -->
-
-Bạn dùng:
-
-<!-- <div class="menu"> -->
-
+Lỗi 2: Menu không dùng &lt;nav&gt;
+Bạn dùng: &lt;div class="menu"&gt;
 Google không nhận đây là thanh điều hướng.
+Sửa thành: &lt;nav&gt;
 
-Sửa thành:
-
-<!-- <nav> -->
-
-Lỗi 3: Nội dung chính không dùng
-
- <!-- <main> -->
-
-Bạn dùng:
-
-<!-- <div class="main"> -->
-
+Lỗi 3: Nội dung chính không dùng &lt;main&gt;
+Bạn dùng: &lt;div class="main"&gt;
 Google không biết đâu là nội dung chính của trang.
+Sửa thành: &lt;main&gt;
 
-Sửa thành:
+Lỗi 4: Sản phẩm không dùng &lt;article&gt; hoặc &lt;section&gt;
+Bạn dùng: &lt;div class="product"&gt;
+Google không nhận đây là một nội dung độc lập.
+Sửa thành: &lt;article class="product"&gt;
 
-<!-- <main> -->
-
-Lỗi 4: Sản phẩm không dùng
-
- <!-- <article> hoặc <section> -->
-
-Bạn dùng:
-
-<!-- <div class="product"> -->
-
-Google không nhận đây là một nội dung độc lập (bài viết/sản phẩm).
-
-Sửa thành:
-
-<!-- <article class="product"> -->
-
-Lỗi 5 (rất quan trọng): Tiêu đề sản phẩm không dùng heading
-
- <!-- <h1>, <h2> -->
-
-Bạn dùng:
-
-<!-- <div class="title"> -->
-
+Lỗi 5: Tiêu đề sản phẩm không dùng heading &lt;h1&gt;
+Bạn dùng: &lt;div class="title"&gt;
 Google ưu tiên heading để hiểu nội dung chính.
-
-Sửa thành:
-
-<!-- <h1>iPhone 16 Pro</h1> -->
-
-Lỗi 6: Ảnh không có thuộc tính alt
-
-Bạn dùng:
-
-<!-- <img src="iphone.jpg"> -->
-
-Google không hiểu ảnh nói về gì → SEO ảnh kém.
-
-Sửa thành:
-
-<!-- <img src="iphone.jpg" alt="iPhone 16 Pro"> -->
-
-Lỗi 7: Footer không dùng
-
- <!-- <footer> -->
-
-Bạn dùng:
-
-<!-- <div class="footer"> -->
-
-Sửa thành:
-
-<!-- <footer> -->
+Sửa thành: &lt;h1&gt;iPhone 16 Pro&lt;/h1&gt;
 
 A3.
 Hộp 1
@@ -162,28 +99,28 @@ Hộp 3
 
 Giải Thích:
 
-<!-- <div>  --> là block element
+&lt;div&gt; là block element
 
 Block nghĩa là chiếm toàn bộ chiều ngang dòng
 Luôn xuống dòng mới
 Vì vậy:
 Hộp 1, Hộp 2, Hộp 3 đều nằm mỗi cái một dòng riêng.
 
-<!-- <span> là inline element -->
+&lt;span&gt; là inline element
 
 Inline nghĩa là nằm trên cùng một dòng nếu còn chỗ
 Không tự xuống dòng
 
-<!-- <strong> cũng là inline element -->
-<!-- <strong> giống <span> về kiểu hiển thị (inline) -->
+&lt;strong&gt; cũng là inline element
+&lt;strong&gt; giống &lt;span&gt;về kiểu hiển thị (inline)
 
 Nhưng có ý nghĩa semantic là nhấn mạnh nội dung (thường in đậm)
 
 A4.
 
-<!-- <thead> chứa phần tiêu đề bảng
-<tbody> chứa dữ liệu chính
-<tfoot> chứa phần tổng kết cuối bảng -->
+&lt;thead&gt; chứa phần tiêu đề bảng
+&lt;tbody&gt; chứa dữ liệu chính
+&lt;tfoot&gt; chứa phần tổng kết cuối bảng
 
 Không nên dùng table để tạo layout vì:
 
