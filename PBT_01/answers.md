@@ -59,81 +59,99 @@ Tổng thời gian load trang
 
 A2.
 4 lỗi Semantic khiến SEO thấp
-Lỗi 1: Không dùng thẻ <header>
+Lỗi 1: Không dùng thẻ
+
+<!-- <header> -->
 
 Bạn dùng:
 
-<div class="header">
+<!-- <div class="header"> -->
 
 Google không biết đây là phần đầu trang.
 
 Sửa thành:
 
-<header>
- Lỗi 2: Menu không dùng <nav>
+<!-- <header> -->
+
+Lỗi 2: Menu không dùng
+
+ <!-- <nav> -->
 
 Bạn dùng:
 
-<div class="menu">
+<!-- <div class="menu"> -->
 
 Google không nhận đây là thanh điều hướng.
 
 Sửa thành:
 
-<nav>
- Lỗi 3: Nội dung chính không dùng <main>
+<!-- <nav> -->
+
+Lỗi 3: Nội dung chính không dùng
+
+ <!-- <main> -->
 
 Bạn dùng:
 
-<div class="main">
+<!-- <div class="main"> -->
 
 Google không biết đâu là nội dung chính của trang.
 
 Sửa thành:
 
-<main>
- Lỗi 4: Sản phẩm không dùng <article> hoặc <section>
+<!-- <main> -->
+
+Lỗi 4: Sản phẩm không dùng
+
+ <!-- <article> hoặc <section> -->
 
 Bạn dùng:
 
-<div class="product">
+<!-- <div class="product"> -->
 
 Google không nhận đây là một nội dung độc lập (bài viết/sản phẩm).
 
 Sửa thành:
 
-<article class="product">
- Lỗi 5 (rất quan trọng): Tiêu đề sản phẩm không dùng heading <h1>, <h2>
+<!-- <article class="product"> -->
+
+Lỗi 5 (rất quan trọng): Tiêu đề sản phẩm không dùng heading
+
+ <!-- <h1>, <h2> -->
 
 Bạn dùng:
 
-<div class="title">
+<!-- <div class="title"> -->
 
 Google ưu tiên heading để hiểu nội dung chính.
 
 Sửa thành:
 
-<h1>iPhone 16 Pro</h1>
- Lỗi 6: Ảnh không có thuộc tính alt
+<!-- <h1>iPhone 16 Pro</h1> -->
+
+Lỗi 6: Ảnh không có thuộc tính alt
 
 Bạn dùng:
 
-<img src="iphone.jpg">
+<!-- <img src="iphone.jpg"> -->
 
 Google không hiểu ảnh nói về gì → SEO ảnh kém.
 
 Sửa thành:
 
-<img src="iphone.jpg" alt="iPhone 16 Pro">
- Lỗi 7: Footer không dùng <footer>
+<!-- <img src="iphone.jpg" alt="iPhone 16 Pro"> -->
+
+Lỗi 7: Footer không dùng
+
+ <!-- <footer> -->
 
 Bạn dùng:
 
-<div class="footer">
+<!-- <div class="footer"> -->
 
 Sửa thành:
 
-<footer>
+<!-- <footer> -->
 
 A3.
 Hộp 1
@@ -144,22 +162,28 @@ Hộp 3
 
 Giải Thích:
 
-<div> là block element
+<!-- <div>  --> là block element
+
 Block nghĩa là chiếm toàn bộ chiều ngang dòng
 Luôn xuống dòng mới
 Vì vậy:
 Hộp 1, Hộp 2, Hộp 3 đều nằm mỗi cái một dòng riêng.
-<span> là inline element
+
+<!-- <span> là inline element -->
+
 Inline nghĩa là nằm trên cùng một dòng nếu còn chỗ
 Không tự xuống dòng
-<strong> cũng là inline element
-<strong> giống <span> về kiểu hiển thị (inline)
+
+<!-- <strong> cũng là inline element -->
+<!-- <strong> giống <span> về kiểu hiển thị (inline) -->
+
 Nhưng có ý nghĩa semantic là nhấn mạnh nội dung (thường in đậm)
 
 A4.
-<thead> chứa phần tiêu đề bảng
+
+<!-- <thead> chứa phần tiêu đề bảng
 <tbody> chứa dữ liệu chính
-<tfoot> chứa phần tổng kết cuối bảng
+<tfoot> chứa phần tổng kết cuối bảng -->
 
 Không nên dùng table để tạo layout vì:
 
