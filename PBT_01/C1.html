@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi"> <!-- html + lang để xác định ngôn ngữ trang -->
+<head>
+  <meta charset="UTF-8"> <!-- charset để hiển thị tiếng Việt -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
+  <title>Chi tiết sản phẩm</title> <!-- title để hiển thị tên trang -->
+</head>
+
+<body>
+  <header> <!-- header vì đây là phần đầu trang -->
+    <nav aria-label="main navigation"> <!-- nav vì là menu điều hướng chính -->
+      <ul> <!-- ul vì danh sách menu không cần thứ tự -->
+        <li><a href="#">Trang chủ</a></li> <!-- link điều hướng -->
+        <li><a href="#">Danh mục</a></li>
+        <li><a href="#">Giỏ hàng</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main> <!-- main vì đây là nội dung chính của trang -->
+
+    <nav aria-label="breadcrumb"> <!-- nav vì breadcrumb là điều hướng -->
+      <ol> <!-- ol vì breadcrumb có thứ tự -->
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Điện thoại</a></li>
+        <li aria-current="page">iPhone 16</li> <!-- trang hiện tại -->
+      </ol>
+    </nav>
+
+    <section> <!-- section vì nhóm nội dung chi tiết sản phẩm -->
+      <section> <!-- section vì khu vực ảnh sản phẩm -->
+        <figure> <!-- figure vì ảnh là nội dung minh họa -->
+          <img src="#" alt="Ảnh sản phẩm 1"> <!-- img để hiển thị ảnh -->
+        </figure>
+
+        <figure> <!-- figure cho ảnh thứ 2 -->
+          <img src="#" alt="Ảnh sản phẩm 2">
+        </figure>
+
+        <figure> <!-- figure cho ảnh thứ 3 -->
+          <img src="#" alt="Ảnh sản phẩm 3">
+        </figure>
+
+        <figure> <!-- figure cho ảnh thứ 4 -->
+          <img src="#" alt="Ảnh sản phẩm 4">
+        </figure>
+
+        <figure> <!-- figure cho ảnh thứ 5 -->
+          <img src="#" alt="Ảnh sản phẩm 5">
+        </figure>
+      </section>
+
+      <section> <!-- section vì nhóm thông tin sản phẩm -->
+        <h1>Tên sản phẩm</h1> <!-- h1 vì là tiêu đề chính của trang -->
+
+        <p>Giá: <strong>...</strong></p> <!-- p vì là thông tin, strong để nhấn mạnh giá -->
+
+        <p>Đánh giá: ★★★★☆</p> <!-- p vì là text hiển thị đánh giá -->
+
+        <p>Mô tả sản phẩm...</p> <!-- p vì mô tả là đoạn văn -->
+      </section>
+    </section>
+
+    <section> <!-- section vì đây là khu vực thông số kỹ thuật -->
+      <h2>Thông số kỹ thuật</h2> <!-- h2 vì là tiêu đề cấp dưới -->
+
+      <table> <!-- table vì dữ liệu dạng hàng/cột -->
+        <thead> <!-- thead vì chứa tiêu đề bảng -->
+          <tr> <!-- tr vì là một hàng -->
+            <th>Thông số</th> <!-- th vì là tiêu đề cột -->
+            <th>Chi tiết</th>
+          </tr>
+        </thead>
+
+        <tbody> <!-- tbody vì chứa dữ liệu chính -->
+          <tr>
+            <td>CPU</td> <!-- td vì là dữ liệu -->
+            <td>...</td>
+          </tr>
+
+          <tr>
+            <td>RAM</td>
+            <td>...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section> <!-- section vì đây là khu vực đánh giá/bình luận -->
+      <h2>Đánh giá & Bình luận</h2> <!-- h2 cho tiêu đề khu vực -->
+
+      <article> <!-- article vì mỗi review là nội dung độc lập -->
+        <h3>Người dùng A</h3> <!-- h3 vì tiêu đề nhỏ trong review -->
+        <p>Nội dung đánh giá...</p> <!-- p vì là đoạn text -->
+      </article>
+
+      <article> <!-- article cho review khác -->
+        <h3>Người dùng B</h3>
+        <p>Nội dung đánh giá...</p>
+      </article>
+    </section>
+  </main>
+
+  <aside> <!-- aside vì đây là phần phụ (sidebar) -->
+    <h2>Sản phẩm tương tự</h2> <!-- h2 vì tiêu đề khu vực sidebar -->
+
+    <ul> <!-- ul vì danh sách sản phẩm tương tự -->
+      <li><a href="#">Sản phẩm 1</a></li> <!-- link sản phẩm -->
+      <li><a href="#">Sản phẩm 2</a></li>
+      <li><a href="#">Sản phẩm 3</a></li>
+    </ul>
+  </aside>
+
+  <footer> <!-- footer vì đây là phần cuối trang -->
+    <p>&copy; 2026 Cửa hàng Online</p> <!-- p vì thông tin copyright -->
+  </footer>
+</body>
+</html>

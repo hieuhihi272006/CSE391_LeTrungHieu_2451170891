@@ -128,3 +128,41 @@ Sai semantic → SEO kém
 Khó responsive trên mobile
 Code rối, khó bảo trì
 Accessibility kém
+
+B3.
+Lỗi 1: Dòng 1 — &lt;!DOCTYPE&gt; thiếu "html" — Sửa thành &lt;!DOCTYPE html&gt;
+
+Lỗi 2: Dòng 2 — Thẻ &lt;html&gt; thiếu thuộc tính lang — Sửa thành &lt;html lang="vi"&gt;
+
+Lỗi 3: Dòng 4 — Thẻ &lt;title&gt; không đóng — Sửa thành &lt;title&gt;Trang web&lt;/title&gt;
+
+Lỗi 4: Dòng 5 — meta charset sai ("utf8") — Sửa thành &lt;meta charset="UTF-8"&gt;
+
+Lỗi 5: Dòng 7 — Thẻ &lt;h1&gt; không đóng đúng (dùng &lt;h1&gt; thay vì &lt;/h1&gt;) — Sửa thành &lt;/h1&gt;
+
+Lỗi 6: Dòng 11 — Thẻ &lt;a&gt; đầu tiên không đóng đúng — Sửa thành &lt;/a&gt;
+
+Lỗi 7: Dòng 19 — Thẻ &lt;img&gt; thiếu dấu ngoặc kép và thiếu alt — Sửa thành &lt;img src="iphone.jpg" alt="..."&gt;
+
+Lỗi 8: Dòng 21 — Sai nesting: đóng &lt;/p&gt; trước &lt;/b&gt; — Sửa thành &lt;p&gt;Giá: &lt;strong&gt;...&lt;/strong&gt;&lt;/p&gt;
+
+Lỗi 9: Dòng 26 — Table thiếu semantic header (dùng &lt;td&gt; thay vì &lt;th&gt;) — Sửa hàng đầu thành &lt;th&gt;
+
+Lỗi 10: Dòng 25-35 — Table thiếu &lt;thead&gt; và &lt;tbody&gt; — Thêm &lt;thead&gt; và &lt;tbody&gt;
+
+Lỗi 11: Dòng 39 — Có 2 thẻ &lt;main&gt; trong cùng trang (semantic sai) — Sửa phần thứ 2 thành &lt;aside&gt;
+
+Lỗi 12: Dòng 45 — Thẻ &lt;p&gt; trong footer không đóng — Sửa thành &lt;/p&gt;
+
+Lỗi 13: Thiếu thẻ meta viewport — Thêm &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+C2.
+Việc dùng &lt;div&gt; cho mọi thứ rồi thêm class có thể chạy được, nhưng nói rằng semantic HTML “không cần thiết” là sai về mặt kỹ thuật.
+
+Thứ nhất, semantic HTML giúp SEO tốt hơn. Công cụ tìm kiếm như Google phân tích cấu trúc trang để hiểu nội dung chính là gì. Nếu bạn dùng &lt;main&gt;, &lt;article&gt;, &lt;header&gt;, &lt;nav&gt;, bot sẽ nhận biết rõ đâu là nội dung sản phẩm, đâu là menu, đâu là phần phụ. Nếu tất cả chỉ là &lt;div&gt;, công cụ tìm kiếm khó hiểu hơn và trang có thể bị đánh giá thấp về chất lượng cấu trúc.
+
+Thứ hai, semantic HTML cực kỳ quan trọng với Accessibility. Người dùng khiếm thị dùng screen reader sẽ dựa vào các thẻ như &lt;nav&gt; để nhảy nhanh tới menu, &lt;main&gt; để tới nội dung chính, &lt;footer&gt; để tới thông tin cuối trang. Nếu toàn bộ trang chỉ có &lt;div&gt;, họ phải nghe từng phần một cách thủ công, gây trải nghiệm rất tệ.
+
+Ví dụ cụ thể: trong trang thương mại điện tử, mỗi sản phẩm nên đặt trong &lt;article&gt;, bên trong có &lt;h2&gt; tên sản phẩm. Khi đó screen reader có thể liệt kê danh sách các sản phẩm theo heading/article, và Google cũng hiểu đây là danh sách item.
+
+Tuy nhiên &lt;div&gt; vẫn phù hợp trong trường hợp chỉ cần wrapper để layout hoặc grouping không mang ý nghĩa nội dung, ví dụ &lt;div class="container"&gt; để căn giữa hoặc chia grid.
