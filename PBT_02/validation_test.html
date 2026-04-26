@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+      }
+      form {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      label {
+        font-weight: bold;
+      }
+      input {
+        padding: 8px;
+        font-size: 14px;
+      }
+      button {
+        padding: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>HTML5 Validation Test</h2>
+
+    <form>
+      <!-- Trường hợp 1 -->
+      <div>
+        <label>Case 1: required text (empty)</label>
+        <input type="text" required value="" />
+      </div>
+
+      <!-- Trường hợp 2 -->
+      <div>
+        <label>Case 2: email = "abc"</label>
+        <input type="email" value="abc" />
+      </div>
+
+      <!-- Trường hợp 3 -->
+      <div>
+        <label>Case 3: number min=1 max=10 value=15</label>
+        <input type="number" min="1" max="10" value="15" />
+      </div>
+
+      <!-- Trường hợp 4 -->
+      <div>
+        <label>Case 4: pattern [0-9]{10} value="abc123"</label>
+        <input type="text" pattern="[0-9]{10}" value="abc123" />
+      </div>
+
+      <!-- Trường hợp 5 -->
+      <div>
+        <label>Case 5: password minlength=8 value="123"</label>
+        <input type="password" minlength="8" value="123" />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

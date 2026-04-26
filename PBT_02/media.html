@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia Product Page</title>
+    <link rel="stylesheet" href="./media.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Giới thiệu sản phẩm iPhone 16 Series</h1>
+      <p>Trang demo multimedia cho bài tập HTML5</p>
+
+      <!-- Inline SVG Logo -->
+      <svg
+        class="logo"
+        width="80"
+        height="80"
+        viewBox="0 0 80 80"
+        aria-label="Logo demo hình tròn"
+      >
+        <circle cx="40" cy="40" r="35" fill="black"></circle>
+        <text x="40" y="47" font-size="22" text-anchor="middle" fill="white">
+          E
+        </text>
+      </svg>
+    </header>
+
+    <!-- Product Images -->
+    <section>
+      <h2>Hình ảnh sản phẩm</h2>
+
+      <figure>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFyRSMg3s4GbYnKCuQThNRi5VdzoGBrZ75sho4T_sNLA&s=10"
+          loading="lazy"
+          alt="iPhone 16 Pro Max màu Titan, mặt lưng"
+        />
+        <figcaption>iPhone 16 Pro Max - Màu Titan (mặt lưng)</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz-COq5unpmNOOndo2-90jgqPpdODMpc9Hu66CIAZu67GzLEpi2iSMaWoD&s=10"
+          loading="lazy"
+          alt="Mặt trước iPhone 16 Pro Max hiển thị màn hình"
+        />
+        <figcaption>
+          Mặt trước iPhone 16 Pro Max - Màn hình Dynamic Island
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZwyMotSXpqb5Msj9MHepfDibBHysPMERWp0AyzgumE9DVd9w_0bv6lNHC&s=10"
+          loading="lazy"
+          alt="Cụm camera sau của iPhone 16 Pro Max chụp cận cảnh"
+        />
+        <figcaption>Cụm camera iPhone 16 Pro Max - Chụp cận cảnh</figcaption>
+      </figure>
+    </section>
+
+    <!-- YouTube Video -->
+    <section>
+      <h2>Video giới thiệu (YouTube)</h2>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/UIKdclEIZmQ?si=gSTIULp0Q4nk_TV2"
+        title="YouTube video player"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <p class="note">*Lưu ý: thay VIDEO_ID bằng ID video YouTube thật.</p>
+    </section>
+
+    <!-- Local Video -->
+    <section>
+      <h2>Video local (HTML5 video)</h2>
+
+      <video controls poster="poster.jpg">
+        <source src="iphone16-promo.webm" type="video/webm" />
+        <source src="iphone16-promo.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ video HTML5.
+      </video>
+
+      <p>Video quảng cáo iPhone 16 (demo mp4 + webm).</p>
+    </section>
+
+    <!-- Audio -->
+    <section>
+      <h2>Nhạc nền giới thiệu (Audio)</h2>
+
+      <audio controls>
+        <source src="background-music.mp3" type="audio/mpeg" />
+        <source src="background-music.ogg" type="audio/ogg" />
+        Trình duyệt của bạn không hỗ trợ audio HTML5.
+      </audio>
+
+      <p>Nhạc nền giới thiệu sản phẩm (demo).</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Demo Multimedia E-Commerce</p>
+    </footer>
+  </body>
+</html>
