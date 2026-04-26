@@ -160,3 +160,48 @@ Lỗi 8: Dòng 20 — form thiếu action và method → sai best practice (mặ
 Sửa:
 
 &lt;form action="#" method="post"&gt;
+
+C2.
+1, Pattern regex cho CMND/CCCD và Số tài khoản
+
+CMND/CCCD (đúng 12 chữ số):
+
+pattern="^[0-9]{12}$"
+
+Số tài khoản (10–15 chữ số):
+
+pattern="^[0-9]{10,15}$"
+
+2,HTML5 validation Chưa đủ an toàn.
+
+Vì HTML5 validation chỉ chạy ở trình duyệt (client-side), người dùng có thể:
+
+tắt validation bằng DevTools
+sửa HTML trực tiếp
+gửi request bằng Postman / curl
+giả mạo dữ liệu gửi lên server
+
+3, loại validation HTML5 KHÔNG thể làm được (phải dùng JavaScript)
+
+Loại 1: So sánh giữa 2 field
+
+Ví dụ: nhập lại PIN phải giống PIN
+
+Loại 2: Validation theo logic động / điều kiện
+
+Ví dụ: nếu chọn “Visa” thì số thẻ phải đúng format Visa
+
+Loại 3: Kiểm tra dữ liệu với hệ thống/server
+
+Ví dụ: email đã tồn tại chưa, số tài khoản có hợp lệ không, CCCD đã đăng ký chưa
+
+4, 2 rủi ro bảo mật nếu chỉ validate Frontend mà không validate Backend
+
+Rủi ro 1: Người dùng có thể gửi dữ liệu sai / độc hại vào server
+
+ví dụ SQL Injection, XSS payload, ký tự nguy hiểm
+
+Rủi ro 2: Bypass quy trình nghiệp vụ
+
+ví dụ nhập số tài khoản 1 ký tự vẫn tạo được tài khoản
+gửi PIN không đúng format nhưng server vẫn lưu → gây lỗi hệ thống hoặc gian lận
