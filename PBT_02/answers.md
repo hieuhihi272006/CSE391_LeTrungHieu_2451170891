@@ -107,33 +107,56 @@ có ý nghĩa độc lập, có thể tách ra vẫn hiểu
 
 C
 C1.
-Lỗi 1: Dòng 2 — Input "Tên" không có label for="...", thiếu id, name, và required → vi phạm accessibility + validation
-<label for="name">Tên:</label>
-<input type="text" id="name" name="name" required>
-Lỗi 2: Dòng 4 — Input email không có label, thiếu id, name, và required
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" placeholder="Email của bạn" required>
-Lỗi 3: Dòng 6 — Password không có label, thiếu id, name, và required
-<label for="password">Mật khẩu:</label>
-<input type="password" id="password" name="password" placeholder="Mật khẩu" required minlength="6">
-Lỗi 4: Dòng 7 — Nhập lại mật khẩu không có label, thiếu id, name, và required
-<label for="confirmPassword">Nhập lại mật khẩu:</label>
-<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Nhập lại mật khẩu" required minlength="6">
-Lỗi 5: Dòng 9 — Phone dùng type="text" và có value="0901234567" → sai best practice (tự điền sẵn dữ liệu), không có validation
-<label for="phone">Số điện thoại:</label>
-<input type="tel" id="phone" name="phone" placeholder="0901234567" required pattern="0[0-9]{9}">
-Lỗi 6: Dòng 11 — select không có label, thiếu id, name, và không có option mặc định → dễ bị chọn nhầm
-<label for="city">Thành phố:</label>
-<select id="city" name="city" required>
 
-  <option value="">-- Chọn thành phố --</option>
-  <option value="hn">Hà Nội</option>
-  <option value="hcm">TP.HCM</option>
-</select>
+Lỗi 1: Dòng 2 — Input "Tên" không có label for="...", thiếu id, name, và required → vi phạm accessibility + validation
+Sửa:
+
+&lt;label for="name"&gt;Tên:&lt;/label&gt;
+&lt;input type="text" id="name" name="name" required&gt;
+
+Lỗi 2: Dòng 4 — Input email không có label, thiếu id, name, và required
+Sửa:
+
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" placeholder="Email của bạn" required&gt;
+
+Lỗi 3: Dòng 6 — Password không có label, thiếu id, name, và required
+Sửa:
+
+&lt;label for="password"&gt;Mật khẩu:&lt;/label&gt;
+&lt;input type="password" id="password" name="password" placeholder="Mật khẩu" required minlength="6"&gt;
+
+Lỗi 4: Dòng 7 — Nhập lại mật khẩu không có label, thiếu id, name, và required
+Sửa:
+
+&lt;label for="confirmPassword"&gt;Nhập lại mật khẩu:&lt;/label&gt;
+&lt;input type="password" id="confirmPassword" name="confirmPassword" placeholder="Nhập lại mật khẩu" required minlength="6"&gt;
+
+Lỗi 5: Dòng 9 — Phone dùng type="text" và có value="0901234567" → sai best practice (tự điền sẵn dữ liệu), không có validation
+Sửa:
+
+&lt;label for="phone"&gt;Số điện thoại:&lt;/label&gt;
+&lt;input type="tel" id="phone" name="phone" placeholder="0901234567" required pattern="0[0-9]{9}"&gt;
+
+Lỗi 6: Dòng 11 — select không có label, thiếu id, name, và không có option mặc định → dễ bị chọn nhầm
+Sửa:
+
+&lt;label for="city"&gt;Thành phố:&lt;/label&gt;
+&lt;select id="city" name="city" required&gt;
+&lt;option value=""&gt;-- Chọn thành phố --&lt;/option&gt;
+&lt;option value="hn"&gt;Hà Nội&lt;/option&gt;
+&lt;option value="hcm"&gt;TP.HCM&lt;/option&gt;
+&lt;/select&gt;
+
 Lỗi 7: Dòng 16 — Checkbox đồng ý điều khoản bị thiếu input type="checkbox" và label không liên kết → lỗi validation + accessibility
-<label>
-  <input type="checkbox" id="agree" name="agree" required>
-  Tôi đồng ý điều khoản
-</label>
+Sửa:
+
+&lt;label&gt;
+&lt;input type="checkbox" id="agree" name="agree" required&gt;
+Tôi đồng ý điều khoản
+&lt;/label&gt;
+
 Lỗi 8: Dòng 20 — form thiếu action và method → sai best practice (mặc định GET)
-<form action="#" method="post">
+Sửa:
+
+&lt;form action="#" method="post"&gt;
