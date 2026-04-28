@@ -166,3 +166,6 @@ Thứ hai, semantic HTML cực kỳ quan trọng với Accessibility. Người d
 Ví dụ cụ thể: trong trang thương mại điện tử, mỗi sản phẩm nên đặt trong &lt;article&gt;, bên trong có &lt;h2&gt; tên sản phẩm. Khi đó screen reader có thể liệt kê danh sách các sản phẩm theo heading/article, và Google cũng hiểu đây là danh sách item.
 
 Tuy nhiên &lt;div&gt; vẫn phù hợp trong trường hợp chỉ cần wrapper để layout hoặc grouping không mang ý nghĩa nội dung, ví dụ &lt;div class="container"&gt; để căn giữa hoặc chia grid.
+
+D,
+link video: https://drive.google.com/file/d/12PCZHAJ9DN-nHPREK_WT-YAnAnOTRMO1/view?usp=drive_link
