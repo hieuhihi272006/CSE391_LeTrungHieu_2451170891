@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model Lab</title>
+
+    <link rel="stylesheet" href="../css/boxmodel_lab.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Box Model Lab</h1>
+      <p>Chứng minh content-box vs border-box + Layout 3 cột</p>
+    </header>
+
+    <section>
+      <h2>Phần 1: Content-box vs Border-box</h2>
+
+      <div class="row">
+        <div class="box box-content">
+          <h3>Hộp 1 (content-box)</h3>
+          <p>width: 300px</p>
+          <p>padding: 20px</p>
+          <p>border: 5px</p>
+        </div>
+
+        <div class="box box-border">
+          <h3>Hộp 2 (border-box)</h3>
+          <p>width: 300px</p>
+          <p>padding: 20px</p>
+          <p>border: 5px</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Phần 2: Layout 3 cột (Container 1000px)</h2>
+
+      <h3>Trường hợp A: KHÔNG dùng border-box (layout bị vỡ)</h3>
+      <div class="container no-borderbox">
+        <div class="col sidebar">Sidebar 250px + padding 15px</div>
+        <div class="col content">Content 500px + padding 20px</div>
+        <div class="col ads">Ads 250px + padding 15px</div>
+      </div>
+
+      <h3>Trường hợp B: DÙNG border-box (layout đúng 1000px)</h3>
+      <div class="container use-borderbox">
+        <div class="col sidebar">Sidebar 250px + padding 15px</div>
+        <div class="col content">Content 500px + padding 20px</div>
+        <div class="col ads">Ads 250px + padding 15px</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Box Model Lab - Week 2</p>
+    </footer>
+  </body>
+</html>

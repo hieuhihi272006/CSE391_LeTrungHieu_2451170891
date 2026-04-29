@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+/* display: flex; 
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+  height: 130px;
+  align-items: center;
+  justify-content: space-between; */
+/* main {
+  width: 1170px;
+  margin: 0 auto;
+} */
+
+header {
+  background: linear-gradient(to top, #c6c8ce, #1d4ed8);
+  text-align: center;
+  padding: 20px;
+}

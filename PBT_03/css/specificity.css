@@ -1,0 +1,39 @@
+p {
+  color: black;
+}
+
+p:hover {
+  color: brown;
+}
+
+.text {
+  color: blue;
+}
+
+.highlight {
+  color: green;
+}
+
+.text.highlight {
+  color: purple;
+}
+
+body p.text {
+  color: teal;
+}
+
+p[class="text highlight"] {
+  color: orange;
+}
+
+#demo {
+  color: red;
+}
+
+#demo.text {
+  color: pink;
+}
+
+p#demo.text.highlight {
+  color: gold;
+}
