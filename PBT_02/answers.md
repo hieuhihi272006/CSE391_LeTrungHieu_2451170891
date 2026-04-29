@@ -205,3 +205,6 @@ Rủi ro 2: Bypass quy trình nghiệp vụ
 
 ví dụ nhập số tài khoản 1 ký tự vẫn tạo được tài khoản
 gửi PIN không đúng format nhưng server vẫn lưu → gây lỗi hệ thống hoặc gian lận
+
+D,
+https://drive.google.com/file/d/1FueMpnGTb8pLHH1VRwLpD_VUCL5HRaLo/view?usp=drive_link
