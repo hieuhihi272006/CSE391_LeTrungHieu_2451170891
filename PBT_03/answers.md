@@ -247,6 +247,25 @@ Vì rule 10 có specificity cao nhất (1,2,1) nên thắng tất cả rule còn
 
 - Nếu đổi thứ tự nhưng vẫn giữ rule 10 tồn tại, kết quả không đổi vì rule 10 có specificity cao nhất.
 
+C1,
+1.
+Chiều rộng thực tế sidebar = 300 + 40 + 2 = 342px
+Chiều rộng thực tế content = 660 + 60 + 2 = 722px
+
+2.
+.content không đủ chỗ nằm cạnh .sidebar, nên nó bị rớt xuống dòng mới (float sẽ xuống dòng khi không đủ chỗ).
+
+3.
+dùng border-box, thì width sẽ bao gồm cả padding + border.
+content-box, nhưng phải giảm width để bù padding + border.
+
+C2,
+1, font-size = 20px, color = green
+2, color = blue
+3, font-size = 20px, color = blue
+4, color = green
+
+
 D,
 https://drive.google.com/file/d/1PQUc_G7cP_ZIi8IbYc3FOwuFdBqSy5Uk/view?usp=drive_link
 

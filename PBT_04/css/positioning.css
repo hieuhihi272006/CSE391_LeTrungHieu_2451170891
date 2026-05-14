@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #f4f4f4;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 60px;
+
+  background: #222;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 20px;
+
+  padding-top: 80px;
+}
+
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  height: fit-content;
+
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.content {
+  flex: 1;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 15px;
+}
+
+.card button {
+  padding: 10px 15px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.card button:hover {
+  background: #444;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background: red;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.long-text {
+  grid-column: 1 / span 2;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.long-text p {
+  margin-bottom: 10px;
+}
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+  background: #222;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  text-decoration: none;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.to-top:hover {
+  background: #444;
+}
