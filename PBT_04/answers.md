@@ -186,4 +186,5 @@ B3.
 Compile SCSS to CSS
 
 sass scss/style.scss css/style.css
+
 ```
