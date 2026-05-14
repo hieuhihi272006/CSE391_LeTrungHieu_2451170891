@@ -181,4 +181,9 @@ Hoặc viết gọn:
 .sidebar {
     flex: 0 0 250px;
 }
+
+B3.
+Compile SCSS to CSS
+
+sass scss/style.scss css/style.css
 ```

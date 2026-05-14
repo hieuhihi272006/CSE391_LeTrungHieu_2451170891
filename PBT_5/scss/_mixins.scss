@@ -1,0 +1,25 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-shadow($type: small) {
+  @if $type == small {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  } @else if $type == large {
+    box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
