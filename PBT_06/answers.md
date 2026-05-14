@@ -86,5 +86,6 @@ Từ md (≥768px) trở lên mới có max-width như container
 
 Dùng khi muốn mobile full màn hình, nhưng desktop/tablet giới hạn chiều rộng.
 
+C1.
 
 ```
