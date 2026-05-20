@@ -87,5 +87,79 @@ Từ md (≥768px) trở lên mới có max-width như container
 Dùng khi muốn mobile full màn hình, nhưng desktop/tablet giới hạn chiều rộng.
 
 C1.
+1. Muốn đổi $primary của Bootstrap sang #E63946 thì làm quy trình thế nào?
 
+Bootstrap không cho đổi trực tiếp màu gốc nếu bạn chỉ dùng file bootstrap.min.css (CDN). Muốn đổi đúng chuẩn thì phải build Bootstrap bằng SASS.
+
+Công cụ cần có
+Node.js + npm
+Sass compiler (Bootstrap dùng SCSS)
+(Tùy chọn) Vite / Webpack để build nhanh
+Quy trình chuẩn
+
+Bước 1: Cài Bootstrap source SCSS
+
+npm install bootstrap
+
+Bước 2: Tạo file SCSS custom
+Ví dụ tạo file:
+
+/scss/custom.scss
+
+Bước 3: Override biến $primary trước khi import Bootstrap
+Trong custom.scss:
+
+$primary: #E63946;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+Quan trọng: phải override trước khi import bootstrap, vì Bootstrap đọc biến ngay lúc compile.
+
+Bước 4: Compile SCSS thành CSS
+
+sass scss/custom.scss public/css/bootstrap-custom.css
+
+Bước 5: Link CSS mới thay vì bootstrap.css
+Trong HTML dùng:
+
+<link rel="stylesheet" href="css/bootstrap-custom.css">
+
+=> Lúc này toàn bộ .btn-primary, .bg-primary, .text-primary, .border-primary, alert, link... đều đổi sang màu mới.
+
+2 Modify file nào?
+
+Bạn không sửa trực tiếp file trong node_modules/bootstrap/... (vì update là mất).
+
+Bạn chỉ cần tạo file riêng:
+
+custom.scss (hoặc main.scss)
+
+và output ra:
+
+bootstrap-custom.css
+3 Tại sao KHÔNG nên override kiểu:
+.btn-primary { background: red; }
+
+Vì cách đó chỉ sửa đúng nút .btn-primary, còn Bootstrap có rất nhiều class liên quan $primary như:
+
+.text-primary
+.bg-primary
+.border-primary
+.link-primary
+.btn-outline-primary
+.alert-primary
+.table-primary
+focus ring, hover state, active state...
+
+Nếu override .btn-primary thì giao diện sẽ lệch màu (button đỏ nhưng border/link vẫn xanh).
+
+4 Vì sao nên dùng SASS variables?
+
+Dùng SASS variables giúp:
+
+Bootstrap tự generate đúng toàn bộ hệ thống theme
+Tự tạo ra các màu hover/active/shadow phù hợp
+Dễ maintain (chỉ đổi $primary một chỗ)
+Không bị lỗi khi Bootstrap update version
+Đồng bộ toàn bộ UI theo design system
 ```
