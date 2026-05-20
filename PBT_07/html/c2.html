@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hóa đơn nhà hàng</title>
+  </head>
+  <body>
+    <h1>Hóa đơn nhà hàng</h1>
+    <button onclick="restaurantBill(orders, true, 3)">
+      In hóa đơn (có tip)
+    </button>
+    <button onclick="restaurantBill(orders, false, 3)">
+      In hóa đơn (không tip)
+    </button>
+
+    <pre id="output"></pre>
+
+    <script src="../js/c2.js"></script>
+  </body>
+</html>
