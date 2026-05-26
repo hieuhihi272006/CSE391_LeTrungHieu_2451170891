@@ -1,0 +1,43 @@
+.todo {
+  width: 600px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgb(88, 86, 86);
+}
+.btnAdd:hover {
+  background-color: rgb(55, 45, 139) !important;
+}
+.inputEvent {
+  border: 3px solid rgb(231, 225, 225);
+  outline: none;
+}
+.inputEvent:focus {
+  border: 3px solid rgb(67, 67, 196) !important;
+  transition: 0.5s;
+}
+.container__btn button:hover {
+  background-color: rgb(237, 240, 240);
+}
+
+.input__edit {
+  outline: none;
+  border: none;
+}
+.input__edit {
+  cursor: pointer;
+}
+.icon-delete {
+  display: none;
+}
+
+.event__item:hover .icon-delete {
+  display: flex;
+}
+
+.active {
+  background-color: rgb(91, 91, 204) !important;
+  color: white !important;
+}
+
+.hidden {
+  display: none !important;
+}

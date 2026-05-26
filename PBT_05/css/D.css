@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 16px;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

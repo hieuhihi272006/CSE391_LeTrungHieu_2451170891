@@ -1,0 +1,30 @@
+.navbar__box {
+  background-color: rgba(11, 1, 44, 0.11);
+  backdrop-filter: blur(8px);
+}
+.navbar__box input:focus {
+  outline: none;
+}
+.navbar__hover:hover,
+.header button:hover {
+  transform: scale(1.1);
+}
+body {
+  background: white;
+  color: black !important;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: rgba(11, 1, 44, 0.726);
+  color: white !important;
+}
+
+.img-product:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.product-item:hover {
+  transform: translateY(-3%);
+  transition: 0.5s;
+}

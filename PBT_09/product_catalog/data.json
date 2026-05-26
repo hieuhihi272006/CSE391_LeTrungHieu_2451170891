@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Carlton Conroy II",
+    "price": "119.29",
+    "image": "https://picsum.photos/seed/1x8TN0IJ/2408/279",
+    "id": "1"
+  },
+  {
+    "name": "Marjorie Dietrich",
+    "price": "467.55",
+    "image": "https://picsum.photos/seed/ttFKkfqAb/3640/776?blur=10",
+    "id": "2"
+  },
+  {
+    "name": "Lester Pacocha",
+    "price": "547.29",
+    "image": "https://picsum.photos/seed/y9zn2U0Nl7/494/2406?blur=9",
+    "id": "3"
+  },
+  {
+    "name": "Marion Beatty",
+    "price": "735.85",
+    "image": "https://picsum.photos/seed/P8Yyr/2119/3184?grayscale&blur=3",
+    "id": "4"
+  },
+  {
+    "name": "Whitney Beier",
+    "price": "616.19",
+    "image": "https://picsum.photos/seed/alsU1/3760/2730?blur=5",
+    "id": "5"
+  },
+  {
+    "name": "April Hodkiewicz",
+    "price": "596.35",
+    "image": "https://picsum.photos/seed/0fZ2w1HuLj/3478/1717?blur=9",
+    "id": "6"
+  },
+  {
+    "name": "Oliver Crona",
+    "price": "116.79",
+    "image": "https://picsum.photos/seed/qRdqB/3529/2018",
+    "id": "7"
+  },
+  {
+    "name": "Jackie Strosin",
+    "price": "548.89",
+    "image": "https://picsum.photos/seed/WqwckJ/1100/1793?blur=3",
+    "id": "8"
+  },
+  {
+    "name": "Oscar Goodwin",
+    "price": "3.90",
+    "image": "https://picsum.photos/seed/k0gGavEsm/1686/3027",
+    "id": "9"
+  },
+  {
+    "name": "Sergio Predovic",
+    "price": "928.39",
+    "image": "https://picsum.photos/seed/DQW4548p/1723/2350?blur=1",
+    "id": "10"
+  },
+  {
+    "name": "Jerald Thiel-Kuvalis",
+    "price": "44.89",
+    "image": "https://picsum.photos/seed/IGB7b1Y/1520/2629?blur=2",
+    "id": "11"
+  },
+  {
+    "name": "Ross Larson",
+    "price": "845.75",
+    "image": "https://picsum.photos/seed/kXXvLSp/510/155?grayscale&blur=10",
+    "id": "12"
+  }
+]
