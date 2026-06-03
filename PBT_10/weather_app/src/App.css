@@ -1,0 +1,26 @@
+.main {
+  transform: translate(-50%, -50%);
+}
+
+.search input:focus {
+  border: 1px solid rgb(34, 23, 180) !important;
+  outline: none;
+}
+
+.scale {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid lightgray;
+  border-top: 5px solid black;
+  animation: loading-spin 1s linear infinite;
+}
+
+@keyframes loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
