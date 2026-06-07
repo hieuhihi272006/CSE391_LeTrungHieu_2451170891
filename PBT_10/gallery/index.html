@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll Gallery</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+<body>
+
+<div class="container py-4">
+
+    <h2 class="text-center mb-4">
+        Infinite Scroll Gallery
+    </h2>
+
+    <div
+        id="gallery"
+        class="row g-3"
+    ></div>
+
+    <div
+        id="loading"
+        class="text-center my-4"
+    ></div>
+
+    <div id="load-trigger"></div>
+
+</div>
+
+<div
+    class="modal fade"
+    id="photoModal"
+    tabindex="-1"
+>
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-body text-center">
+                <img
+                    id="modalImage"
+                    class="img-fluid"
+                >
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

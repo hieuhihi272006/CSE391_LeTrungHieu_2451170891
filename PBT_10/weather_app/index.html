@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="card shadow mx-auto" style="max-width: 500px;">
+            <div class="card-body">
+
+                <h2 class="text-center mb-4">
+                    Weather App
+                </h2>
+
+                <div class="input-group mb-3">
+                    <input
+                        type="text"
+                        id="cityInput"
+                        class="form-control"
+                        placeholder="Nhập tên thành phố"
+                    >
+
+                    <button
+                        id="searchBtn"
+                        class="btn btn-primary"
+                    >
+                        Tìm
+                    </button>
+                </div>
+
+                <div id="loading"></div>
+
+                <div id="error"></div>
+
+                <div id="weather"></div>
+
+                <hr>
+
+                <h5>Lịch sử tìm kiếm</h5>
+
+                <ul
+                    id="history"
+                    class="list-group"
+                ></ul>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
