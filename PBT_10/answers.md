@@ -1,4 +1,3 @@
- 
 ```
 Câu A1
 
@@ -12,66 +11,66 @@ Thứ tự output:
 2 - Timeout 0ms
 7 - Nested timeout
 5 - Timeout 100ms
- 
+
 
 Giải thích:
 
 Ban đầu JavaScript thực thi các lệnh đồng bộ (Synchronous) trong Call Stack:
 
- 
+
 console.log("1 - Start");
- 
+
 
 Output:
 
  text
 1 - Start
- 
+
 
 Tiếp theo:
 
- 
+
 setTimeout(() => console.log("2 - Timeout 0ms"), 0);
- 
+
 
 Callback được đưa vào Macrotask Queue.
 
 Tiếp theo:
 
- 
+
 Promise.resolve().then(() => console.log("3 - Promise"));
- 
+
 
 Callback được đưa vào Microtask Queue.
 
 Tiếp theo:
 
- 
+
 console.log("4 - End");
- 
+
 
 Output:
 
  text
 4 - End
- 
+
 
 Tiếp theo:
 
- 
+
 setTimeout(() => console.log("5 - Timeout 100ms"), 100);
- 
+
 
 Được đưa vào Macrotask Queue sau 100ms.
 
 Tiếp theo:
 
- 
+
 Promise.resolve().then(() => {
     console.log("6 - Promise 2");
     setTimeout(() => console.log("7 - Nested timeout"), 0);
 });
- 
+
 
 Callback được đưa vào Microtask Queue.
 
@@ -79,33 +78,33 @@ Sau khi Call Stack rỗng, Event Loop ưu tiên thực hiện toàn bộ Microta
 
 Microtask 1:
 
- 
+
 console.log("3 - Promise");
- 
+
 
 Output:
 
  text
 3 - Promise
- 
+
 
 Microtask 2:
 
- 
+
 console.log("6 - Promise 2");
- 
+
 
 Output:
 
  text
 6 - Promise 2
- 
+
 
 Trong callback này có:
 
- 
+
 setTimeout(() => console.log("7 - Nested timeout"), 0);
- 
+
 
 Callback được thêm vào Macrotask Queue.
 
@@ -113,21 +112,21 @@ Sau khi Microtask Queue rỗng, Event Loop xử lý Macrotask Queue:
 
 Macrotask đầu tiên:
 
- 
+
 2 - Timeout 0ms
- 
+
 
 Tiếp theo:
 
- 
+
 7 - Nested timeout
- 
+
 
 Cuối cùng sau khoảng 100ms:
 
- 
+
 5 - Timeout 100ms
- 
+
 
 Kết quả cuối cùng:
 
@@ -139,7 +138,7 @@ Kết quả cuối cùng:
 2 - Timeout 0ms
 7 - Nested timeout
 5 - Timeout 100ms
- 
+
 
 Khái niệm:
 
@@ -157,16 +156,19 @@ try {
 const response = await fetch("https://api.example.com/data");
 
 ```
+
     if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
     }
 
     const data = await response.json();
     return data;
+
 } catch (error) {
-    console.error("Failed:", error.message);
-    return null;
+console.error("Failed:", error.message);
+return null;
 }
+
 ```
 
 }
@@ -323,7 +325,7 @@ Tóm tắt:
 Câu A3
 
 1. Sơ đồ trạng thái của Promise
- 
+
            Promise
               |
           Pending
@@ -332,7 +334,7 @@ Câu A3
        v           v
  Fulfilled      Rejected
  (resolve)      (reject)
- 
+
 
 * Pending: trạng thái ban đầu, Promise đang chờ kết quả.
 * Fulfilled: Promise thực hiện thành công, gọi resolve().
@@ -407,7 +409,7 @@ return Promise.resolve("Paid");
 
 async function processOrder() {
 
- 
+
 try {
 
     const user = await getUser();
@@ -428,7 +430,7 @@ try {
     console.error(error);
 
 }
- 
+
 
 }
 
@@ -443,5 +445,352 @@ processOrder();
 * Luồng thực thi rõ ràng hơn Promise chaining hoặc Callback Hell.
 
 
+Câu C1
 
- ```
+1. Network Errors (mất mạng giữa chừng)
+
+Nguyên nhân:
+
+* Mất kết nối Internet.
+* DNS lỗi.
+* Server không thể truy cập.
+* Request bị chặn.
+
+Cách xử lý:
+
+* Hiển thị thông báo thân thiện cho người dùng.
+* Cho phép Retry.
+* Ghi log lỗi.
+* Không làm crash ứng dụng.
+
+Ví dụ:
+
+async function getProducts() {
+try {
+
+```
+
+    const response =
+        await fetch("/api/products");
+
+    return await response.json();
+
+} catch (error) {
+
+    console.error(error);
+
+    alert(
+        "Không thể kết nối tới máy chủ. Vui lòng thử lại."
+    );
+
+    return null;
+
+}
+
+```
+
+}
+
+2. API Errors
+
+404 Not Found
+
+Nguyên nhân:
+
+* URL sai.
+* Sản phẩm không tồn tại.
+
+Xử lý:
+
+if (response.status === 404) {
+throw new Error("Product not found");
+}
+
+500 Internal Server Error
+
+Nguyên nhân:
+
+* Lỗi phía server.
+
+Xử lý:
+
+if (response.status === 500) {
+throw new Error("Server error");
+}
+
+Thông báo:
+
+"Máy chủ đang gặp sự cố. Vui lòng thử lại sau."
+
+429 Too Many Requests
+
+Nguyên nhân:
+
+* Gửi quá nhiều request trong thời gian ngắn.
+
+Xử lý:
+
+if (response.status === 429) {
+throw new Error("Too many requests");
+}
+
+Thông báo:
+
+"Bạn đang thao tác quá nhanh. Vui lòng thử lại sau vài giây."
+
+3. Timeout (> 10 giây)
+
+Hàm fetchWithTimeout:
+
+async function fetchWithTimeout(url, ms = 10000) {
+
+```
+
+const timeoutPromise =
+new Promise((\_, reject) => {
+
+        setTimeout(() => {
+
+            reject(
+                new Error("Request timeout")
+            );
+
+        }, ms);
+
+    });
+
+return Promise.race([
+fetch(url),
+timeoutPromise
+]);
+
+```
+
+}
+
+Sử dụng:
+
+try {
+
+```
+
+const response =
+await fetchWithTimeout(
+"/api/products",
+10000
+);
+
+```
+
+} catch (error) {
+
+```
+
+console.error(error.message);
+
+```
+
+}
+
+Giải thích:
+
+* fetch(url) và timeoutPromise chạy song song.
+* Promise.race() lấy Promise hoàn thành đầu tiên.
+* Nếu quá 10 giây sẽ báo timeout.
+
+4. Retry Logic (thử lại 3 lần)
+
+async function fetchWithRetry(
+url,
+maxRetries = 3
+) {
+
+```
+
+let attempt = 0;
+
+while (attempt <= maxRetries) {
+
+    try {
+
+        const response =
+            await fetch(url);
+
+        return response;
+
+    } catch (error) {
+
+        attempt++;
+
+        if (attempt > maxRetries) {
+            throw error;
+        }
+
+        console.log(
+            `Retry ${attempt}`
+        );
+    }
+
+}
+
+```
+
+}
+
+Sử dụng:
+
+try {
+
+```
+
+const response =
+await fetchWithRetry(
+"/api/products",
+3
+);
+
+```
+
+} catch (error) {
+
+```
+
+console.error(
+"All retries failed"
+);
+
+```
+
+}
+
+Giải thích:
+
+* Nếu lỗi mạng xảy ra thì thử lại.
+* Tối đa 3 lần.
+* Nếu vẫn thất bại thì throw lỗi.
+
+Tóm tắt chiến lược E-Commerce:
+
+* Network Error → Retry + thông báo người dùng.
+* 404 → Hiển thị "Không tìm thấy dữ liệu".
+* 500 → Báo lỗi server.
+* 429 → Yêu cầu chờ rồi thử lại.
+* Timeout → Hủy request và báo timeout.
+* Retry → Tự động thử lại các lỗi tạm thời.
+
+
+Câu C2
+
+Bảng so sánh:
+
+| Method               | Khi nào resolve?            | Khi nào reject?            | Use case                          |
+| -------------------- | --------------------------- | -------------------------- | --------------------------------- |
+| Promise.all()        | Tất cả Promise thành công   | Chỉ cần 1 Promise thất bại | Cần toàn bộ dữ liệu               |
+| Promise.allSettled() | Khi tất cả Promise hoàn tất | Không bao giờ reject       | Muốn biết kết quả từng request    |
+| Promise.race()       | Promise đầu tiên resolve    | Promise đầu tiên reject    | Timeout, chọn phản hồi nhanh nhất |
+| Promise.any()        | Chỉ cần 1 Promise resolve   | Khi tất cả Promise reject  | Dùng server dự phòng              |
+
+1. Promise.all()
+
+Ví dụ trang Product Detail cần:
+
+* Product Info
+* Reviews
+* Related Products
+
+const [
+product,
+reviews,
+related
+] = await Promise.all([
+fetch("/api/product/1")
+.then(r => r.json()),
+fetch("/api/reviews/1")
+.then(r => r.json()),
+fetch("/api/related/1")
+.then(r => r.json())
+]);
+
+Nếu một API lỗi thì toàn bộ Promise.all() reject.
+
+2. Promise.allSettled()
+
+Ví dụ Dashboard:
+
+* User Profile
+* Notifications
+* Recommendations
+
+const results =
+await Promise.allSettled([
+fetch("/api/profile"),
+fetch("/api/notifications"),
+fetch("/api/recommendations")
+]);
+
+Kết quả:
+
+[
+{ status: "fulfilled" },
+{ status: "rejected" },
+{ status: "fulfilled" }
+]
+
+Ứng dụng vẫn hiển thị dữ liệu có sẵn dù một API thất bại.
+
+3. Promise.race()
+
+Ví dụ timeout API:
+
+const response =
+await Promise.race([
+fetch("/api/products"),
+new Promise((_, reject) =>
+setTimeout(
+() =>
+reject(
+new Error("Timeout")
+),
+10000
+)
+)
+]);
+
+Nếu API phản hồi trước:
+
+→ Thành công.
+
+Nếu timeout xảy ra trước:
+
+→ Reject.
+
+4. Promise.any()
+
+Ví dụ hệ thống có nhiều CDN:
+
+const image =
+await Promise.any([
+fetch("cdn1/image.jpg"),
+fetch("cdn2/image.jpg"),
+fetch("cdn3/image.jpg")
+]);
+
+Chỉ cần một CDN hoạt động là đủ.
+
+Promise.any() chỉ reject khi:
+
+* cdn1 lỗi
+* cdn2 lỗi
+* cdn3 lỗi
+
+tức là tất cả Promise đều reject.
+
+Tóm tắt:
+
+* Promise.all() → cần tất cả thành công.
+* Promise.allSettled() → cần biết kết quả của từng Promise.
+* Promise.race() → lấy Promise hoàn thành đầu tiên.
+* Promise.any() → chỉ cần một Promise thành công.
+
+
+```
