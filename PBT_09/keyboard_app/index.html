@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Accessibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Keyboard Accessibility Demo</h1>
+
+<div class="gallery">
+    <img
+        id="galleryImage"
+        src=""
+        alt="Gallery Image"
+        tabindex="0"
+        aria-label="Gallery image"
+    >
+
+    <div class="controls">
+        <button id="prevBtn" aria-label="Previous image">
+            Previous
+        </button>
+
+        <button id="nextBtn" aria-label="Next image">
+            Next
+        </button>
+    </div>
+
+    <p id="counter"></p>
+</div>
+
+<div
+    id="modal"
+    class="modal hidden"
+    role="dialog"
+    aria-modal="true"
+>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Preview image">
+
+        <button
+            id="closeModal"
+            aria-label="Close modal"
+        >
+            Close
+        </button>
+    </div>
+</div>
+
+<div
+    id="palette"
+    class="palette hidden"
+    role="dialog"
+    aria-modal="true"
+>
+    <div class="palette-box">
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Type command..."
+            aria-label="Command search"
+        >
+
+        <ul
+            id="commandList"
+            role="listbox"
+        ></ul>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

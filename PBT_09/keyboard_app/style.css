@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+img {
+    width: 700px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+button,
+input {
+    padding: 10px;
+    margin: 10px;
+}
+
+button:focus,
+input:focus,
+img:focus {
+    outline: 3px solid dodgerblue;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal,
+.palette {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden,
+.palette.hidden {
+    display: none;
+}
+
+.modal-content,
+.palette-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.palette-box {
+    width: 500px;
+}
+
+.palette-box input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#commandList {
+    list-style: none;
+    padding: 0;
+}
+
+#commandList li {
+    padding: 10px;
+}
+
+.selected {
+    background: #ddd;
+}
